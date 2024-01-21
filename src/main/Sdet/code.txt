@@ -1,0 +1,509 @@
+1)Reverse String
+String a="Rahul";
+for(int i=a.length()-1;i>=0;i--)
+{
+  System.out.println(a.charAt(i));
+}
+..............................................
+2)Reverse Int
+int b=12345;
+String a=Integer.toString(b);
+for(int i=a.length()-1;i>=0;i--)
+{
+  System.out.println(a.charAt(i));
+}
+...............................................
+3)Reverse Array
+int[]a={1,2,3,4,5};
+for(int i=a.length-1;i>=0;i--)
+{
+  System.out.println(a[i]+"");
+}
+.................................................
+4)Duplicate Char from String
+   String a="Rahul Ravindra Sonar";
+  char[]ab=a.toCharArray();
+int count=0;
+  for(int i=0;i<=ab.length-1;i++)
+  {
+     count=1;
+    for(int j=i+1;j<=ab.length-1;j++)
+   {
+      if(ab[i]==ab[j]&&ab[i]!=' ')
+      {
+      count++;
+       ab[j]='0';
+       break;
+      }
+   }
+
+if(count>1 &&ab[i]!='0')
+  {
+   System.out.println(ab[i]+"");
+  }
+}
+....................................................
+5)Remove Duplicate from String
+ String a="Rahul Ravindra Sonar";
+ char[]ab=a.toCharArray();
+int count=0;
+  for(int i=0;i<ab.length-1;i++)
+  {
+    count=1;
+    for(int j=i+1;j<ab.length-1;j++)
+   {
+      if(ab[i]==ab[j]&&ab[i]!=' ')
+     {
+      count++;
+       ab[j]='0';
+
+      }
+   }
+
+if(count==1 && ab[i]!='0')
+  {
+   System.out.println(ab[i]+" ");
+  }
+}
+......................................................
+6)Remove Duplicate from Array
+int []ab={1,2,3,1,2,3,5,56};
+int count=0;
+  for(int i=0;i<ab.length;i++)
+  {
+    count=1;
+    for(int j=i+1;j<ab.length;j++)
+   {
+      if(ab[i]==ab[j]&&ab[i]!=' ')
+     {
+      count++;
+       ab[j]='0';
+
+      }
+   }
+
+if(count==1 && ab[i]!='0')
+  {
+   System.out.println(ab[i]+" ");
+  }
+}
+......................................
+7)Duplicate Character from int array
+ int []ab={1,2,3,1,2,3,5,56};
+int count=0;
+  for(int i=0;i<ab.length;i++)
+  {
+    count=1;
+    for(int j=i+1;j<ab.length;j++)
+   {
+      if(ab[i]==ab[j] && ab[i]!=' ')
+     {
+      count++;
+       ab[j]='0';
+
+      }
+   }
+
+if(count>1 && ab[i]!='0')
+  {
+   System.out.println(ab[i]+" ");
+  }
+}
+................................................
+8)Max no from array
+int []a={1,2,55,6689,56,488,558};
+int max=Integer.MIN_VALUE;
+for(int Element:a)
+{
+  if(Element>max)
+  {
+   max=Element;
+  }
+ }
+System.out.println("max of array:"+max);
+
+OR
+int max=a[0];
+for(int i=0;i<=a.length-1;i++)
+ {
+   if(a[i]>max)
+    {
+      max=a[i];
+    }
+  }
+System.out.println("max value is:"+max);
+..................................................
+9) 3rd Max salary from array
+int []a={1,2,55,6689,56,488,558};
+int max=a[0];
+int temp;
+for(int i=0;i<=a.length-1;i++)
+ {
+     for(int j=i+1;j<a.length-1;j++)
+     {
+
+      if(a[i]>a[j])
+    {
+        temp=a[i];
+         a[i]=a[j];
+         a[j]=temp;
+    }
+  }
+
+ }
+System.out.println("max value is:"+a[a.length-3]);
+..........................................................
+10)Min salary from array
+int min=a[0];
+for(int i=0;i<=a.length-1;i++)
+ {
+   if(a[i]<min)
+    {
+      min=a[i];
+    }
+  }
+System.out.println("min value is:"+min);
+........................................................
+11)Remove Duplicate by Hashset
+import java.util.LinkedHashSet;
+int []ab={1,2,3,1,2,3,5,56};
+LinkedHashSet arr=new LinkedHashSet();
+
+for(Object O:ab)
+{
+ arr.add(O);
+}
+for(Object xyz:arr)
+{
+  System.out.println(xyz);
+}
+..........................................................
+12)Count How many times char comes in String
+String a="Rahulhjdsgiow9i";
+  char[]ab=a.toCharArray();
+ArrayList<Character> arr=new ArrayList<Character>();
+int count=0;
+  for(int i=0;i<=ab.length-1;i++)
+  {
+     count=1;
+    for(int j=i+1;j<=ab.length-1;j++)
+   {
+      if(ab[i]==ab[j])
+     {
+      count++;
+       ab[j]=' ';
+
+      }
+   }
+if(!(arr.equals(ab[i])))
+{
+   arr.add(ab[i]);
+  System.out.println(ab[i]+" "+count);
+}
+}
+................................................
+
+13)Sum from string no
+String a="23kkdr30f859";
+int sum=0;
+for(int i=0;i<=a.length()-1;i++)
+{
+  char ch=a.charAt(i);
+  if(Character.isDigit(ch))
+  {
+   sum=sum+Character.getNumericValue(ch);
+  }
+}
+System.out.println(sum);
+..................................................
+14)Seprate digit Char and Special char
+String a="23kkdr$#30f#@@dd859";
+    char[]ab=a.toCharArray();
+    String Digit="";
+    String Alphabetic="";
+    String special="";
+    for(int i=0;i<=ab.length-1;i++)
+    {
+        if(Character.isDigit(ab[i]))
+        {
+            Digit=Digit+ab[i];
+        }
+         else if(Character.isAlphabetic(ab[i]))
+        {
+            Alphabetic=Alphabetic+ab[i];
+        }
+            else
+            {
+                special=special+ab[i];
+            }
+    }
+    System.out.println("Digit is:"+Digit);
+    System.out.println("Alphabetic is:"+Alphabetic);
+    System.out.println("Special char:"+special);
+........................................................
+15)Palindrome
+
+String Original,rev="";
+  Scanner sc=new Scanner(System.in);
+  System.out.println("Enter the no");
+
+ Original=sc.nextLine();
+  int length=Original.length();
+  for(int i=length-1;i>=0;i--){
+      rev=rev+Original.charAt(i);
+  }
+  if(Original.equals(rev)){
+      System.out.println("no is palindrome");
+
+  }
+  else{
+      System.out.println("no is not palindrome");
+  }
+
+OR
+ int n,r,temp,sum=0;
+ n=414;
+ temp=n;
+ while(n!=0){
+     r=n%10;
+     sum=sum*10+r;
+     n=n/10;
+ }
+ if(temp==sum){
+     System.out.println("no is palindrome");
+ }
+ else
+ {
+     System.out.println("no is not palindrome");
+ }
+......................................................................
+16)Prime no 1 to 100
+Scanner sc=new Scanner(System.in);
+ System.out.println("Enter 1st no");
+ int start=sc.nextInt();
+ System.out.println("Enter 2nd no");
+ int end=sc.nextInt();
+ System.out.print("Prime no:");
+ for(int i=start;i<=end;i++)
+ {
+     if(isPrime(i))
+     {
+         System.out.println(i);
+     }
+
+ }
+ }
+ public static boolean isPrime(int n)
+ {
+     if(n<=0)
+     {
+         return false;
+     }
+     for(int i=2;i<=Math.sqrt(n);i++)
+     {
+         if(n%i==0)
+         {
+             return false;
+         }
+     }
+return true;
+ }
+...........................................................
+17)Prime no
+ int m,n,flag=0;
+
+ Scanner sc=new Scanner(System.in);
+System.out.println("enter the no");
+        n=sc.nextInt();
+ m=n/10;
+        if(n==0||n==1)
+        {
+            System.out.println("no is not prime");
+        }
+        for(int i=2;i<=m;i++)
+        {
+            if(n%i==0)
+            {
+                flag=1;
+                System.out.println("no is not prime");
+                break;
+            }
+        }
+        if(flag==0){
+            System.out.println("no is prime");
+        }
+..............................................................
+18)Input -Reverse
+    input 12 32 33 44    //44 33 32 12
+    int[]a = new int[5];
+		int[]b = new int[a.length];
+		Scanner sc = new Scanner(System.in);
+		System.out.println("pls enter the array");
+		for (int i=0;i<=a.length-1; i++)
+		{
+			a[i]=sc.nextInt();
+		}
+		int count=0;
+		for (int i=a.length-1;i>=0;i--)
+		{
+			b[count]=a[i];
+			count++;
+		}
+		System.out.println(Arrays.toString(b));
+		System.out.println("size of given array:"+a.length);
+.............................................................................
+19)Uppercase && lowerCase
+String a="Rahyfu RjndkG FDdl";
+int upper=0;int lower=0;
+
+for(int i=0;i<a.length()-1;i++)
+{
+  char ch=a.charAt(i);
+   if(ch>=65&& ch<=90)
+{
+ upper++;
+}
+else
+{
+ lower++;
+}
+}
+System.out.println("upper is:"+upper);
+System.out.println("lower is:"+lower);
+............................................................................
+20)String a="Rahul      //Raahhhuuuulllll
+   String b="";
+for(int i=0;i<=a.length()-1;i++) {
+char ch=a.charAt(i);
+b=b+ch;
+
+for(int j=0;j<=b.length()-1;j++) {
+System.out.print(ch);
+}
+}
+
+..........................................................................
+21)fabonacci series
+int n1=0,n2=1,n3;
+	int count=10;
+	System.out.print(n1+""+n2);
+	for(int i=2;i<=count;i++)
+	{
+		n3=n1+n2;
+		System.out.print(""+n3);
+		n1=n2;
+		n2=n3;
+	}
+	System.out.println();
+........................................................................
+22)Factorial
+
+	int n,fact=1;
+	n=5;
+	for(int i=1;i<=n;i++) {
+		fact=fact*i;
+	}
+	System.out.println("fact is:"+fact);
+..................................................................
+23)Swapping without third variable
+	int x=10;
+		int y=20;
+		x=x+y;//30
+		y=x-y;//10
+		x=x-y;//20
+		System.out.println(x);
+		System.out.println(y);
+......................................................................
+24)Compair Two array
+    String[]a={"abc","ddf","kjg","kgj"};
+		    String[]b={"abc","fff","ddf","jfj"};
+		   for(int i=0;i<a.length;i++)
+		    {
+		     if(a[i]==b[i])
+		     {
+		       String c=a[i];
+		       System.out.println(c);
+
+		     }
+		}
+........................................................................
+25)Random value
+                System.out.println("1st Random Number: " + Math.random());
+		System.out.println("2nd Random Number: " + Math.random());
+		System.out.println("3rd Random Number: " + Math.random());
+		System.out.println("4th Random Number: " + Math.random());
+...........................................................................
+26)Duplicate Words
+String a="I Love Java, i love selenium";
+		int count;
+		String c=a.toLowerCase();
+		String[] b=c.split(" ");
+		for(int i=0;i<=b.length-1;i++) {
+			count=1;
+			for(int j=i+1;j<=b.length-1;j++) {
+				if(b[i].equals(b[j])) {
+					count++;
+					b[j]="0";
+
+				}
+			}
+			if(count>1&&b[i]!="0") {
+				System.out.println(b[i]);
+			}
+		}
+.....................................................................................
+27)Find out 1st/2nd/3rd...... Max number in Array.By Sort
+ Solution:
+
+int a[]={10,30,20,60,70,50};
+Arrays.sort(a);
+System.out.println("3rd max number in given array is:  "+a[a.length-3]);
+................................................................................
+28)Even or odd
+int a=13;
+			if (a%2==1)
+			{
+			System.out.println("Odd");
+			}
+			else
+			{
+			System.out.println("Even");
+		}
+.............................................................................
+29)sort the number and character from given string.
+----->
+		String a="Rahul123S";
+
+		System.out.println(a.replaceAll("[^0-9]",""));
+OUTPUT:123
+......................................................................
+30)Total no of Character in string
+ String a = "The best of both worlds";
+	        int count = 0;
+
+	        //Counts each character except space
+	        for(int i = 0; i < a.length(); i++) {
+	            if(a.charAt(i) != ' ')
+	                count++;
+	        }
+
+	        //Displays the total number of characters present in the given string
+	        System.out.println("Total number of characters in a string: " + count);
+..................................................................................
+31)Vowels and Consonunt
+String a="Rahul Ravindra Sonar";
+	int vowels=0;
+	int  consonants=0;
+	String b=a.toLowerCase();
+	for(int i=0;i<=b.length()-1;i++) {
+		if(a.charAt(i)=='a'||a.charAt(i)=='e'||a.charAt(i)=='i'||a.charAt(i)=='o'||a.charAt(i)=='u')
+		{
+			vowels++;
+		}
+		else if(a.charAt(i)>='a'&&a.charAt(i)<='z')
+		{
+			consonants++;
+		}
+	}
+	System.out.println("Vowels is:"+vowels);
+	System.out.println("consonants is:"+consonants);
