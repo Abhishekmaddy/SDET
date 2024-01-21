@@ -1,4 +1,4 @@
-package main.java;
+package Sdet;
 
 import java.util.LinkedHashSet;
 

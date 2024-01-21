@@ -1,3 +1,5 @@
+package Sdet;
+
 public class specialChar {
     public static void main(String[] args) {
 

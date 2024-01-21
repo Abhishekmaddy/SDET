@@ -17,9 +17,9 @@ public class joinTwoArray {
         combine.addAll(arr2);
         System.out.println(combine);
 
-//        Object[] combo = combine.toArray();
-//
-//        System.out.println(Arrays.toString(combo));
+        Object[] combo = combine.toArray();
+
+        System.out.println(Arrays.toString(combo));
 
 
     }
