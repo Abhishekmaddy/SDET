@@ -1,2 +1,4 @@
-package main.abhi.Sha;public class cla {
+package java.main;
+
+public class cla {
 }

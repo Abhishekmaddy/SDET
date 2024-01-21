@@ -7,7 +7,7 @@ public class ArrayMinMax {
     public static void main(String[] args) {
 
         //Initialize array
-        int [] arr = new int [] {25, 11, 7, 75, 56};
+        int [] arr = new int [] {1, 11, 7, 75, 56};
         Arrays.sort(arr);
 
         //Initialize max with first element of array.

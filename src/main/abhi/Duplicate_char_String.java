@@ -22,7 +22,7 @@ public class Duplicate_char_String {
                 }
                 //A character is considered as duplicate if count is greater than 1
                 if(count > 1 && string[i] != '0')
-                    System.out.println(string[i]);
+                    System.out.print(string[i]);
             }
         }
     }

@@ -28,6 +28,6 @@ public class FizzBuss {
     }
 
     public static void main(String[] args) {
-        System.out.println(fizzBuzz(15));
+        System.out.println(fizzBuzz(5));
     }
 }
