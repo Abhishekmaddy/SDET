@@ -1,6 +1,5 @@
-package XPackX;
+package main.XPackX;
 
-import org.apache.xml.utils.XMLString;
 
 public class VowelAndConsonunt {
 

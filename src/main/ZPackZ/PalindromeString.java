@@ -1,4 +1,4 @@
-package ZPackZ;
+package main.ZPackZ;
 
 public class PalindromeString {
 
