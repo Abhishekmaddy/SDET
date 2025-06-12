@@ -1,4 +1,4 @@
-package StringProgram;
+package main.StringProgram;
 
 import java.util.LinkedHashSet;
 import java.util.LinkedList;
